@@ -1,0 +1,229 @@
+body {
+  font-family: "Unica One", Avenir, 游ゴシック, YuGothic, "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, メイリオ, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  font-size: 16px;
+  background-color: #F5F5F3;
+  color: #5B5B5B;
+}
+
+
+// ==================== ここからヘッダー ====================
+header {
+  height: 60px;
+  background-color: #FFFFFF;
+  .h_wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    h1 {
+      font-size: 20px;
+      font-family: "Helvetica Neue";
+      color: #57c3e9;
+    }
+    .header_btn {
+      border: 2px solid #57C3E9;
+      padding: 11px 27px;
+      color: #57c3e9;
+      font-size: 14px;
+      border-radius: 4px;
+      transition: 0.3s;
+      &:hover {
+        color: #fff;
+        background-color: #57c3e9;
+      }
+    }
+    
+  }
+}
+
+
+
+// ==================== ここから<%= yield %> ====================
+.m_wrapper {
+  margin: 0 auto 25px;
+  width: 800px;
+  text-align: left;
+  height: auto;
+}
+  .h3_title {
+    font-size: 30px;
+    // border-bottom: 3px solid #AAD6EC;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin: 30px;
+    width: auto;
+    text-align: center;
+}
+
+.end_title {
+  margin: 50px 0;
+}
+
+
+
+// ↓ここからindex.html.erb
+.search_form {
+  margin: 50px 0 50px;
+  display: flex;
+  justify-content: center;
+  .search_input {
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+    border-radius: 4px;
+    margin-right: 20px;
+    padding: 15px;
+    width: 40%;
+  }
+  .search_btn {
+    background-color: #57C3E9;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 15px 32px;
+  }
+}
+
+.name {
+  margin: 10px 0;
+  padding: 15px 15px 15px 50px;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.text_left {
+  display: inline-block;
+  width: 15%;
+  text-align: center;
+}
+.text_right {
+  display: inline-block;
+  width: 85%;
+}
+
+.text_display {
+  border: 1px solid #D8D8D8;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.btn_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  .btn {
+    background-color: #57C3E9;
+    padding: 12px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 7px;
+  }
+}
+
+
+// ↓ここからnew.html.erb、edit.html.erb
+.title_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.text_form {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  font-size: 16px;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.form_btn_wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 35px;
+}
+
+.form_btn {
+  background-color: #57C3E9;
+    /* width: 15%; */
+    /* max-width: 70px; */
+    padding: 10px 40px;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+}
+
+
+// ↓ここからcreate.html.erb、update.html.erb
+.toppage_btn_wrapper {
+  display: flex;
+  justify-content: space-around;
+  .toppage_btn {
+    background-color: #57C3E9;
+    padding: 10px 40px;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+
+
+// ==================== ここからフッター ====================
+footer {
+  height: 45px;
+  background-color: #FFFFFF;
+  .f_wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .f_text {
+      color: #57C3E9;
+      font-size: 12px;
+    }
+  }
+}
+
+
+
+// ==================== ここから新規登録 ====================
+.sign_wrapper {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  .container {
+    margin: 20px auto 0;
+    padding: 45px 30px;
+    width: 660px;
+    background-color: #fff;
+    h2 {
+      margin-bottom: 30px;
+    }
+    .new_user {
+
+    }
+  }
+}
+.new_form {
+  margin-bottom: 20px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  width: 90%;
+  padding: 15px;
+}

@@ -1,0 +1,23 @@
+<%= form_with(model: word, local: true) do |form| %>
+  <div class="name_field">
+    <%= form.text_field :name, placeholder: "プログラミング用語", class: 'text_form' %>
+  </div>
+  <div class="language_field">
+    <%= form.text_field :language, placeholder: "言語", class: 'text_form' %>
+  </div>
+  <div class="meaning_field">
+    <%= form.text_area :meaning, placeholder: "意味 / 内容", rows: "10", class: 'text_form' %>
+  </div>
+  <div class="meaning_field">
+    <%= form.text_field :resources, placeholder: "情報源", class: 'text_form' %>
+  </div>
+  <div class="example_field">
+    <%= form.text_field :example, placeholder: "例", class: 'text_form' %>
+  </div>
+  <div class="form_btn_wrapper">
+    <div class="form_btn">
+      <%= form.submit "登録" %>
+    </div>
+    <a href="/" class="form_btn">戻る</a>
+  </div>
+<% end %>

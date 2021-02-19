@@ -1,0 +1,26 @@
+<div class="name">
+  <%= word.name %>
+</div>
+<div class="meaning text_display">
+  <p class="text_left">意味</p>
+  <p class="text_right"><%= word.meaning %></p>
+</div>
+<div class="example text_display">
+  <p class="text_left">例 ）</p>
+  <p class="text_right"><%= word.example %></p>
+</div>
+<div class="resources text_display">
+  <p class="text_left">情報源</p>
+  <p class="text_right"><%= word.resources %></p>
+</div>
+<div class="language text_display">
+  <p class="text_left">言語</p>
+  <p class="text_right"><%= word.language %></p>
+</div>
+<div class="btn_wrapper">
+  <span class="btn"><%= link_to '詳細', word_path(word.id), method: :get %></span>
+  <% if user_signed_in? && current_user.id == word.user_id %>
+    <span class="btn"><%= link_to '編集', edit_word_path(word.id), method: :get %></span>
+    <span class="btn"><%= link_to '削除', word_path(word.id), method: :delete %></span>
+  <% end %>
+</div>

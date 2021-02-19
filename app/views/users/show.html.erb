@@ -1,0 +1,6 @@
+<p><%= @nickname %>さんの登録した単語</p>
+<div class="m_wrapper">
+  <% @words.each do |word| %>
+    <%= render partial: "words/word", locals: { word: word } %>
+  <% end %>
+</div>
