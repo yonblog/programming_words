@@ -1,6 +1,8 @@
 <div class="sign_wrapper">
   <div class="container">
-    <h2>新規登録</h2>
+    <div class="new_title_wrap">
+      <h2 class="new_title">新規登録</h2>
+    </div>
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
         <%= devise_error_messages! %>
 
@@ -28,7 +30,7 @@
         </div>
 
         <div class="actions">
-          <%= f.submit "Sign up" %>
+          <%= f.submit "Sign up", class: "actions_btn" %>
         </div>
     <% end %>
   </div>

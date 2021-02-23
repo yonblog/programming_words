@@ -28,7 +28,7 @@ header {
       border-radius: 4px;
       transition: 0.3s;
       &:hover {
-        color: #fff;
+        color: #FFFFFF;
         background-color: #57c3e9;
       }
     }
@@ -47,7 +47,6 @@ header {
 }
   .h3_title {
     font-size: 30px;
-    // border-bottom: 3px solid #AAD6EC;
     display: inline-block;
     padding-bottom: 10px;
     margin: 30px;
@@ -67,7 +66,7 @@ header {
   display: flex;
   justify-content: center;
   .search_input {
-    background-color: #fff;
+    background-color: #FFFFFF;
     border: 1px solid #D8D8D8;
     border-radius: 4px;
     margin-right: 20px;
@@ -120,7 +119,7 @@ header {
     background-color: #57C3E9;
     padding: 12px;
     font-size: 14px;
-    color: #fff;
+    color: #FFFFFF;
     border-radius: 5px;
     display: inline-block;
     margin-left: 7px;
@@ -160,7 +159,7 @@ header {
     /* max-width: 70px; */
     padding: 10px 40px;
     font-size: 15px;
-    color: #fff;
+    color: #FFFFFF;
     border-radius: 5px;
     display: inline-block;
     text-align: center;
@@ -179,7 +178,7 @@ header {
     background-color: #57C3E9;
     padding: 10px 40px;
     font-size: 15px;
-    color: #fff;
+    color: #FFFFFF;
     border-radius: 5px;
     display: inline-block;
     text-align: center;
@@ -193,7 +192,7 @@ header {
 
 // ↓ここからwords/show.html.erb
 .comment_form_wrapper{
-  background-color: #fff;
+  background-color: #FFFFFF;
   max-width: 660px;
   width: 85%;
   height: auto;
@@ -215,7 +214,7 @@ header {
       background-color: #57C3E9;
       padding: 10px 40px;
       font-size: 15px;
-      color: #fff;
+      color: #FFFFFF;
       border-radius: 5px;
       display: inline-block;
       text-align: center;
@@ -237,6 +236,60 @@ header {
   margin: 20px 0 40px;
 }
 
+// ↓ここからapp/views/devise/registrations/new.html.erb
+.sign_wrapper {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  .container {
+    margin: 20px auto 20px;
+    padding: 45px 30px;
+    width: 660px;
+    background-color: #FFFFFF;
+    h2 {
+      margin-bottom: 30px;
+    }
+    .new_user {
+
+    }
+  }
+}
+.new_title_wrap {
+  display: flex;
+  justify-content: center;
+  .new_title {
+    font-size: 30px;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    width: auto;
+    text-align: center;
+  }
+}
+
+.new_form, .new_for {
+  display: block;
+  margin: 0 auto 30px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  width: 90%;
+  padding: 15px;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  .actions_btn {
+    background-color: #57C3E9;
+    color: #FFFFFF;
+    display: block;
+    padding: 10px 40px;
+    border-radius: 5px;
+    text-align: center;
+  }
+}
+
+
+
 
 // ==================== ここからフッター ====================
 footer {
@@ -255,29 +308,3 @@ footer {
 }
 
 
-
-// ==================== ここから新規登録 ====================
-.sign_wrapper {
-  font-size: 16px;
-  font-weight: 400;
-  color: #666;
-  .container {
-    margin: 20px auto 0;
-    padding: 45px 30px;
-    width: 660px;
-    background-color: #fff;
-    h2 {
-      margin-bottom: 30px;
-    }
-    .new_user {
-
-    }
-  }
-}
-.new_form {
-  margin-bottom: 20px;
-  border: 1px solid #D8D8D8;
-  border-radius: 5px;
-  width: 90%;
-  padding: 15px;
-}
