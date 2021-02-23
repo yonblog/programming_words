@@ -7,5 +7,6 @@ class Word < ApplicationRecord
     if search != ""
       Word.where('name LIKE(?)', "%#{search}%")
     end
+    Word.all
   end
 end
