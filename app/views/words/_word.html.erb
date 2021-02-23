@@ -18,9 +18,9 @@
   <p class="text_right"><%= word.language %></p>
 </div>
 <div class="btn_wrapper">
-  <span class="btn"><%= link_to '詳細', word_path(word.id), method: :get %></span>
+  <%= link_to '詳細', word_path(word.id), method: :get, class: "btn" %>
   <% if user_signed_in? && current_user.id == word.user_id %>
-    <span class="btn"><%= link_to '編集', edit_word_path(word.id), method: :get %></span>
-    <span class="btn"><%= link_to '削除', word_path(word.id), method: :delete %></span>
+    <%= link_to '編集', edit_word_path(word.id), method: :get, class: "btn" %>
+    <%= link_to '削除', word_path(word.id), method: :delete, class: "btn" %>
   <% end %>
 </div>
