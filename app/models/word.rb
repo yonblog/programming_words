@@ -6,7 +6,12 @@ class Word < ApplicationRecord
   def self.search(search)
     if search != ""
       Word.where('name LIKE(?)', "%#{search}%")
-    end
+    else
+<<<<<<< Updated upstream
     Word.all
+=======
+      Word.all
+>>>>>>> Stashed changes
+    end
   end
 end
