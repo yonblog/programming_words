@@ -3,6 +3,7 @@
   <%= form.submit "検索", class: "search_btn" %>
 <% end %>
 
+<div class="m_wrapper">
   <% @words.each do |word| %>
     <%= render partial: "word", locals: { word: word } %>
   <% end %>
