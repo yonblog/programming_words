@@ -7,7 +7,11 @@ class Word < ApplicationRecord
     if search != ""
       Word.where('name LIKE(?)', "%#{search}%")
     else
+<<<<<<< Updated upstream
     Word.all
+=======
+      Word.all
+>>>>>>> Stashed changes
     end
   end
 end
