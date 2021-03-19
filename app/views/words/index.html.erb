@@ -1,11 +1,11 @@
 <main>
   <%= form_with(url: search_words_path, local: true, method: :get, class: "search_form") do |form| %>
     <%= form.text_field :keyword, placeholder: "単語を検索する", class: "search_input" %>
-    <%= form.submit "検索", class: "search_btn" %>
+    <%= form.submit "検索", class: "search_btn", id: "search_js" %>
   <% end %>
 
 
-  <div class="m_wrapper">
+  <div class="m_wrapper search_dis">
     <% @words.each do |word| %>
       <%= render partial: "word", locals: { word: word } %>
     <% end %>

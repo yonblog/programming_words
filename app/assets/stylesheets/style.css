@@ -57,7 +57,7 @@ header .h_wrapper .sp_nemu {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 180px;
   height: 100%;
 }
 
@@ -68,6 +68,10 @@ main {
   width: 95%;
   text-align: left;
   height: auto;
+}
+
+.search_dis {
+  display: none;
 }
 
 .h3_title {
@@ -482,10 +486,6 @@ footer .f_wrapper .f_text {
   }
   header .h_wrapper .sp_header_btn:hover {
     opacity: 0.3;
-  }
-  main {
-    margin-top: 180px;
-    height: 100%;
   }
   .search_form {
     display: block;

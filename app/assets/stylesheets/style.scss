@@ -51,7 +51,7 @@ header {
 
 // ==================== ここから<%= yield %> ====================
 main {
-  margin-top: 100px;
+  margin-top: 180px;
   height: 100%;
 }
 .m_wrapper {
@@ -61,6 +61,9 @@ main {
   width: 95%;
   text-align: left;
   height: auto;
+}
+.search_dis {
+  display: none;
 }
   .h3_title {
     font-size: 30px;
@@ -421,11 +424,6 @@ footer {
         }
       }
     }
-  }
-
-  main {
-    margin-top: 180px;
-    height: 100%;
   }
   // ↓ここからindex.html.erb
   .search_form {
