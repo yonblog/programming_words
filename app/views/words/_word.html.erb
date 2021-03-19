@@ -3,16 +3,16 @@
 </div>
 <div class="meaning text_display">
   <p class="text_left">意味</p>
-  <p class="text_right"><%= word.meaning %></p>
+  <p class="text_right"><%= safe_join(word.meaning.split("\n"), tag(:br)) %></p>
 </div>
 <div class="example text_display">
   <p class="text_left">例 ）</p>
-  <p class="text_right"><%= word.example %></p>
+  <p class="text_right text_ex"><%= word.example %></p>
 </div>
-<div class="resources text_display">
+<%# <div class="resources text_display">
   <p class="text_left">情報源</p>
-  <p class="text_right"><%= word.resources %></p>
-</div>
+  <p class="text_right">word.resources</p>
+<%# </div> %>
 <div class="language text_display">
   <p class="text_left">言語</p>
   <p class="text_right"><%= word.language %></p>

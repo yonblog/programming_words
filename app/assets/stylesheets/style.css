@@ -40,7 +40,7 @@ header .h_wrapper h1 {
 
 header .h_wrapper .header_btn {
   border: 1px solid #FFFF;
-  padding: 11px 27px;
+  padding: 11px 20px;
   color: #FFFF;
   font-size: 14px;
   border-radius: 4px;
@@ -62,8 +62,10 @@ main {
 }
 
 .m_wrapper {
-  margin: 0 auto 25px;
-  width: 800px;
+  margin: 100px auto 0;
+  padding-bottom: 100px;
+  max-width: 800px;
+  width: 95%;
   text-align: left;
   height: auto;
 }
@@ -101,7 +103,7 @@ main {
 }
 
 .search_form .search_btn {
-  background-color: #05668D;
+  background-color: #05668E;
   color: #FFFFFF;
   border-radius: 10px;
   padding: 15px 32px;
@@ -129,6 +131,10 @@ main {
 .text_right {
   display: inline-block;
   width: 85%;
+}
+
+.text_ex {
+  color: #ED5C66;
 }
 
 .text_display {
@@ -199,7 +205,7 @@ main {
 }
 
 .form_btn {
-  background-color: #57C3E9;
+  background-color: #05668E;
   /* width: 15%; */
   /* max-width: 70px; */
   padding: 10px 40px;
@@ -225,7 +231,7 @@ main {
 }
 
 .toppage_btn_wrapper .toppage_btn {
-  background-color: #57C3E9;
+  background-color: #05668E;
   padding: 10px 40px;
   font-size: 15px;
   color: #FFFFFF;
@@ -269,10 +275,11 @@ main {
   border-radius: 5px;
   display: block;
   margin: 40px auto 20px;
+  padding: 10px;
 }
 
 .comment_form_wrapper .form_with .form_btn {
-  background-color: #57C3E9;
+  background-color: #05668E;
   padding: 10px 40px;
   font-size: 15px;
   color: #FFFFFF;
@@ -300,6 +307,7 @@ main {
 .sign_wrapper {
   font-size: 16px;
   font-weight: 400;
+  margin-top: 100px;
   color: #666;
 }
 
@@ -351,12 +359,18 @@ main {
 }
 
 .actions .actions_btn {
-  background-color: #57C3E9;
+  background-color: #05668E;
   color: #FFFFFF;
   display: block;
   padding: 10px 40px;
   border-radius: 5px;
   text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.actions .actions_btn:hover {
+  opacity: 0.7;
 }
 
 footer {
@@ -473,9 +487,6 @@ footer .f_wrapper .f_text {
     margin-top: 180px;
     height: 100%;
   }
-  .m_wrapper {
-    display: none;
-  }
   .search_form {
     display: block;
   }
@@ -488,6 +499,21 @@ footer .f_wrapper .f_text {
   .search_form .search_btn {
     margin: 0 auto;
     display: block;
+  }
+  .name {
+    font-size: 23px;
+  }
+  .text_display {
+    font-size: 13px;
+  }
+  .sign_wrapper {
+    margin-top: 62px;
+  }
+  .sign_wrapper .container {
+    width: 100%;
+  }
+  .sign_wrapper .container .new_title {
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
