@@ -8,11 +8,11 @@
   <div class="meaning_field">
     <%= form.text_area :meaning, placeholder: "意味 / 内容", rows: "10", class: 'text_form' %>
   </div>
-  <div class="meaning_field">
-    <%= form.text_field :resources, placeholder: "情報源", class: 'text_form' %>
-  </div>
+  <%# <div class="meaning_field"> %>
+    <%# form.text_field :resources, placeholder: "情報源", class: 'text_form' %>
+  <%# </div> %>
   <div class="example_field">
-    <%= form.text_field :example, placeholder: "例", class: 'text_form' %>
+    <%= form.text_area :example, placeholder: "例", rows: "10", class: 'text_form' %>
   </div>
   <div class="form_btn_wrapper">
     <%= form.submit "登録", class: "form_btn" %>

@@ -31,7 +31,7 @@ header {
     }
     .header_btn {
       border: 1px solid #FFFF;
-      padding: 11px 27px;
+      padding: 11px 20px;
       color: #FFFF;
       font-size: 14px;
       border-radius: 4px;
@@ -55,8 +55,10 @@ main {
   height: 100%;
 }
 .m_wrapper {
-  margin: 0 auto 25px;
-  width: 800px;
+  margin: 100px auto 0;
+  padding-bottom: 100px;
+  max-width: 800px;
+  width: 95%;
   text-align: left;
   height: auto;
 }
@@ -89,7 +91,7 @@ main {
     width: 40%;
   }
   .search_btn {
-    background-color: #05668D;
+    background-color: #05668E;
     color: #FFFFFF;
     border-radius: 10px;
     padding: 15px 32px;
@@ -115,6 +117,10 @@ main {
 .text_right {
   display: inline-block;
   width: 85%;
+}
+.text_ex {
+  color: #ED5C66;
+  // font-weight: bold;
 }
 
 .text_display {
@@ -169,7 +175,7 @@ main {
 }
 
 .form_btn {
-  background-color: #57C3E9;
+  background-color: #05668E;
     /* width: 15%; */
     /* max-width: 70px; */
     padding: 10px 40px;
@@ -190,7 +196,7 @@ main {
   display: flex;
   justify-content: space-around;
   .toppage_btn {
-    background-color: #57C3E9;
+    background-color: #05668E;
     padding: 10px 40px;
     font-size: 15px;
     color: #FFFFFF;
@@ -224,9 +230,10 @@ main {
       border-radius: 5px;
       display: block;
       margin: 40px auto 20px;
+      padding: 10px;
     }
     .form_btn {
-      background-color: #57C3E9;
+      background-color: #05668E;
       padding: 10px 40px;
       font-size: 15px;
       color: #FFFFFF;
@@ -255,6 +262,7 @@ main {
 .sign_wrapper {
   font-size: 16px;
   font-weight: 400;
+  margin-top: 100px;
   color: #666;
   .container {
     margin: 20px auto 20px;
@@ -291,12 +299,16 @@ main {
   display: flex;
   justify-content: center;
   .actions_btn {
-    background-color: #57C3E9;
+    background-color: #05668E;
     color: #FFFFFF;
     display: block;
     padding: 10px 40px;
     border-radius: 5px;
     text-align: center;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -411,23 +423,10 @@ footer {
     }
   }
 
-  
   main {
     margin-top: 180px;
     height: 100%;
   }
-  
-  
-
-
- 
-
-  .m_wrapper {
-    display: none;
-  }
-
-
-
   // ↓ここからindex.html.erb
   .search_form {
     display: block;
@@ -441,9 +440,27 @@ footer {
       margin: 0 auto;
       display: block;
     }
-    
+  }
+  .name {
+    font-size: 23px;
+  }
+  .text_display {
+    font-size: 13px;
   }
   
+
+  // ↓ここからapp/views/devise/registrations/new.html.erb
+  .sign_wrapper {
+    margin-top: 62px;
+    .container {
+      width: 100%;
+      .new_title {
+        font-size: 25px;
+      }
+    }
+  }
+
+
   
   
   

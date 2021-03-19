@@ -14,12 +14,12 @@
             <%= f.password_field :password, autocomplete: "off", class: 'new_for' %>
           </div>
 
-          <% if devise_mapping.rememberable? %>
-            <div class="field">
-                <%= f.label :remember_me %><br />
-                <%= f.check_box :remember_me, class: 'new_for' %>
-            </div>
-          <% end -%>
+          <%# if devise_mapping.rememberable? %>
+            <%# <div class="field"> %>
+                <%# f.label :remember_me<br /> %>
+                <%# f.check_box :remember_me, class: 'new_for' %>
+            <%# </div> %>
+          <%# end %>
 
           <div class="actions">
             <%= f.submit "Log in", class: "actions_btn" %>
