@@ -1,15 +1,24 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Unica One", Avenir, 游ゴシック, YuGothic, "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, メイリオ, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   font-size: 16px;
-  background-color: #F5F5F3;
+  background-color: #FAFAFA;
   color: #5B5B5B;
+  height: 100%;
+  overflow: scroll;
 }
 
 
 // ==================== ここからヘッダー ====================
 header {
   height: 60px;
-  background-color: #FFFFFF;
+  width: 100%;
+  background-color: #05668D;
+  position: fixed;
+  top: 0;
   .h_wrapper {
     height: 100%;
     display: flex;
@@ -17,28 +26,34 @@ header {
     align-items: center;
     h1 {
       font-size: 20px;
-      font-family: "Helvetica Neue";
-      color: #57c3e9;
+      font-family: "Segoe UI";
+      color: #FFFF;
     }
     .header_btn {
-      border: 2px solid #57C3E9;
+      border: 1px solid #FFFF;
       padding: 11px 27px;
-      color: #57c3e9;
+      color: #FFFF;
       font-size: 14px;
       border-radius: 4px;
       transition: 0.3s;
       &:hover {
-        color: #FFFFFF;
-        background-color: #57c3e9;
+        opacity: 0.3;
       }
     }
-    
+    .sp_nemu {
+      display: none;
+    }
   }
 }
 
 
 
+
 // ==================== ここから<%= yield %> ====================
+main {
+  margin-top: 100px;
+  height: 100%;
+}
 .m_wrapper {
   margin: 0 auto 25px;
   width: 800px;
@@ -74,7 +89,7 @@ header {
     width: 40%;
   }
   .search_btn {
-    background-color: #57C3E9;
+    background-color: #05668D;
     color: #FFFFFF;
     border-radius: 10px;
     padding: 15px 32px;
@@ -116,7 +131,7 @@ header {
   display: flex;
   justify-content: flex-end;
   .btn {
-    background-color: #57C3E9;
+    background-color: #05668D;
     padding: 12px;
     font-size: 14px;
     color: #FFFFFF;
@@ -294,17 +309,157 @@ header {
 // ==================== ここからフッター ====================
 footer {
   height: 45px;
-  background-color: #FFFFFF;
+  width: 100%;
+  background-color: #05668D;
+  position: fixed;
+  bottom: 0;
   .f_wrapper {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     .f_text {
-      color: #57C3E9;
+      color: #FFF;
       font-size: 12px;
     }
   }
 }
 
 
+
+
+
+
+
+// ==================== ここからスマホ用 ====================
+@media screen and (max-width: 599px) {
+  // ↓ここからヘッダー
+  header {
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    .h_wrapper {
+      h1 {
+        font-size: 28px;
+      }
+      .grid-6{
+        display: none;
+      }
+      .sp_nemu {
+        display: block;
+      }
+      /* ↓スマホ用navメニューの三本線を実装 */
+      #nav_open {
+        display: block;
+        width: 35px;
+        height: 26px;
+      }
+      #nav_open span, #nav_open span::before, #nav_open span::after {
+        position: absolute;
+        height: 3px;
+        width: 30px;
+        background: #FFF;
+        content: "";
+        cursor: pointer;
+      }
+      #nav_open span {
+        top: 25px;
+        right: 50px;
+      }
+      #nav_open span::before {
+        bottom: -12px;
+      }
+      #nav_open span::after {
+        bottom: -24px;
+      }
+
+      /* ↓間接セレクタ。同じ階層にあるタグが表示されるようになる */
+      #nav_input:checked ~ .nav_contents {
+        opacity: 1;
+      }
+      .nav_invisible {
+        display: none;
+      }
+
+      /* ↓スマホ用navメニューのレイアウト */
+      .nav_contents {
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 100;
+        width: 100%;
+        height: 65px;
+        background: #05668E;
+        transition: .3s;
+        opacity: 0;
+      }
+      .sp_user_nav {
+        display: flex;
+        justify-content: center;
+        padding-top: 11px;
+      }
+      .sp_header_btn {
+        border: 1px solid #FFFF;
+        padding: 11px 27px;
+        margin: 0 auto;
+        color: #FFFF;
+        font-size: 14px;
+        border-radius: 4px;
+        transition: 0.3s;
+        &:hover {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  
+  main {
+    margin-top: 180px;
+    height: 100%;
+  }
+  
+  
+
+
+ 
+
+  .m_wrapper {
+    display: none;
+  }
+
+
+
+  // ↓ここからindex.html.erb
+  .search_form {
+    display: block;
+    .search_input {
+      display: block;
+      width: 90%;
+      margin: 0 auto 100px;
+      padding: 25px;
+    }
+    .search_btn {
+      margin: 0 auto;
+      display: block;
+    }
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+}
