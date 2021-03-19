@@ -1,14 +1,23 @@
 @charset "UTF-8";
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Unica One", Avenir, 游ゴシック, YuGothic, "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, メイリオ, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   font-size: 16px;
-  background-color: #F5F5F3;
+  background-color: #FAFAFA;
   color: #5B5B5B;
+  height: 100%;
+  overflow: scroll;
 }
 
 header {
   height: 60px;
-  background-color: #FFFFFF;
+  width: 100%;
+  background-color: #05668D;
+  position: fixed;
+  top: 0;
 }
 
 header .h_wrapper {
@@ -25,14 +34,14 @@ header .h_wrapper {
 
 header .h_wrapper h1 {
   font-size: 20px;
-  font-family: "Helvetica Neue";
-  color: #57c3e9;
+  font-family: "Segoe UI";
+  color: #FFFF;
 }
 
 header .h_wrapper .header_btn {
-  border: 2px solid #57C3E9;
+  border: 1px solid #FFFF;
   padding: 11px 27px;
-  color: #57c3e9;
+  color: #FFFF;
   font-size: 14px;
   border-radius: 4px;
   -webkit-transition: 0.3s;
@@ -40,8 +49,16 @@ header .h_wrapper .header_btn {
 }
 
 header .h_wrapper .header_btn:hover {
-  color: #FFFFFF;
-  background-color: #57c3e9;
+  opacity: 0.3;
+}
+
+header .h_wrapper .sp_nemu {
+  display: none;
+}
+
+main {
+  margin-top: 100px;
+  height: 100%;
 }
 
 .m_wrapper {
@@ -84,7 +101,7 @@ header .h_wrapper .header_btn:hover {
 }
 
 .search_form .search_btn {
-  background-color: #57C3E9;
+  background-color: #05668D;
   color: #FFFFFF;
   border-radius: 10px;
   padding: 15px 32px;
@@ -138,7 +155,7 @@ header .h_wrapper .header_btn:hover {
 }
 
 .btn_wrapper .btn {
-  background-color: #57C3E9;
+  background-color: #05668D;
   padding: 12px;
   font-size: 14px;
   color: #FFFFFF;
@@ -344,7 +361,10 @@ header .h_wrapper .header_btn:hover {
 
 footer {
   height: 45px;
-  background-color: #FFFFFF;
+  width: 100%;
+  background-color: #05668D;
+  position: fixed;
+  bottom: 0;
 }
 
 footer .f_wrapper {
@@ -361,7 +381,113 @@ footer .f_wrapper {
 }
 
 footer .f_wrapper .f_text {
-  color: #57C3E9;
+  color: #FFF;
   font-size: 12px;
+}
+
+@media screen and (max-width: 599px) {
+  header {
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+  header .h_wrapper {
+    /* ↓スマホ用navメニューの三本線を実装 */
+    /* ↓間接セレクタ。同じ階層にあるタグが表示されるようになる */
+    /* ↓スマホ用navメニューのレイアウト */
+  }
+  header .h_wrapper h1 {
+    font-size: 28px;
+  }
+  header .h_wrapper .grid-6 {
+    display: none;
+  }
+  header .h_wrapper .sp_nemu {
+    display: block;
+  }
+  header .h_wrapper #nav_open {
+    display: block;
+    width: 35px;
+    height: 26px;
+  }
+  header .h_wrapper #nav_open span, header .h_wrapper #nav_open span::before, header .h_wrapper #nav_open span::after {
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background: #FFF;
+    content: "";
+    cursor: pointer;
+  }
+  header .h_wrapper #nav_open span {
+    top: 25px;
+    right: 50px;
+  }
+  header .h_wrapper #nav_open span::before {
+    bottom: -12px;
+  }
+  header .h_wrapper #nav_open span::after {
+    bottom: -24px;
+  }
+  header .h_wrapper #nav_input:checked ~ .nav_contents {
+    opacity: 1;
+  }
+  header .h_wrapper .nav_invisible {
+    display: none;
+  }
+  header .h_wrapper .nav_contents {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    height: 65px;
+    background: #05668E;
+    -webkit-transition: .3s;
+    transition: .3s;
+    opacity: 0;
+  }
+  header .h_wrapper .sp_user_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 11px;
+  }
+  header .h_wrapper .sp_header_btn {
+    border: 1px solid #FFFF;
+    padding: 11px 27px;
+    margin: 0 auto;
+    color: #FFFF;
+    font-size: 14px;
+    border-radius: 4px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  header .h_wrapper .sp_header_btn:hover {
+    opacity: 0.3;
+  }
+  main {
+    margin-top: 180px;
+    height: 100%;
+  }
+  .m_wrapper {
+    display: none;
+  }
+  .search_form {
+    display: block;
+  }
+  .search_form .search_input {
+    display: block;
+    width: 90%;
+    margin: 0 auto 100px;
+    padding: 25px;
+  }
+  .search_form .search_btn {
+    margin: 0 auto;
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */
