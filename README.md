@@ -1,5 +1,5 @@
 # Programming Words
-![トップページ](./YonsPortfolios1.jpg)
+![トップページ](./ProgrammingWords1.png)
 <br>
 <a href="https://programming-words.herokuapp.com/">アプリはコチラ</a>
 <br>
